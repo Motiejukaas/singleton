@@ -3,8 +3,8 @@ package com.lab3.singleton;
 public class GroceriesAccount extends AccountData {
     private double insert_limit;
 
-    public GroceriesAccount(double amount, String name) {
-        super(amount, name);
+    public GroceriesAccount(String name, double amount, String time) {
+        super(name, amount, time);
     }
 
     @Override

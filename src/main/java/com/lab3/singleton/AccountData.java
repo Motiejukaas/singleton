@@ -3,21 +3,28 @@ package com.lab3.singleton;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.Random;
+
 public class AccountData {
     private double amount;
     private String name;
     private ObservableList<Transaction> transactions = FXCollections.observableArrayList();
 
-    public AccountData(double amount, String name) {
-        this.amount = amount;
+    public AccountData(String name, double amount, String time) {
+
+        Random rand = new Random();
+
+        this.amount = rand.nextInt(1000);
+        this.amount += amount;
         this.name = name;
+        addTransaction(new Transaction(amount, time));
     }
 
     public void withdraw(double sum) {
         if (sum > amount) {
             return;
         }
-        amount -= sum;
+        amount += sum;
     }
 
     public void insert(double sum) {

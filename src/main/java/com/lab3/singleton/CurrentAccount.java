@@ -2,7 +2,7 @@ package com.lab3.singleton;
 
 public class CurrentAccount extends AccountData {
 
-    public CurrentAccount(double amount, String name) {
-        super(amount, name);
+    public CurrentAccount(String name, double amount, String time) {
+        super(name, amount, time);
     }
 }

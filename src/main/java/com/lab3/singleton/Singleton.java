@@ -2,6 +2,9 @@ package com.lab3.singleton;
 
 public class Singleton {
     private static volatile Singleton instance;
+
+    //change String data to Object data
+
     private String data;
 
     private Singleton(String data) {

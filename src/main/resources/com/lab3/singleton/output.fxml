@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="296.0" prefWidth="281.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lab3.singleton.OutputController">
+<AnchorPane prefHeight="296.0" prefWidth="297.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lab3.singleton.OutputController">
    <children>
       <Label fx:id="account_name" layoutX="14.0" layoutY="14.0" text="Account: ">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TableView fx:id="transactions_table" layoutX="14.0" layoutY="78.0" prefHeight="200.0" prefWidth="197.0">
+      <TableView fx:id="transactions_table" layoutX="14.0" layoutY="78.0" prefHeight="200.0" prefWidth="261.0">
         <columns>
-          <TableColumn fx:id="time" prefWidth="98.0" text="Time" />
-          <TableColumn fx:id="amount" prefWidth="98.0" text="Amount" />
+          <TableColumn fx:id="time" prefWidth="159.99999713897705" text="Time" />
+          <TableColumn fx:id="amount" prefWidth="100.80006408691406" text="Amount" />
         </columns>
       </TableView>
       <Label fx:id="balance" layoutX="14.0" layoutY="49.0" text="Balance: ">

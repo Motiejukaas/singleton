@@ -4,13 +4,14 @@ public class SavingsAccount extends AccountData {
 
     private double withdraw_limit;
 
-    public SavingsAccount(double amount, String name) {
-        super(amount, name);
+    public SavingsAccount(String name, double amount, String time) {
+        super(name, amount, time);
     }
 
     @Override
     public void withdraw(double sum) {
-        if (sum > withdraw_limit) {
+
+        if (-sum > withdraw_limit) {
             return;
         }
         super.withdraw(sum);
