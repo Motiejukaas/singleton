@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Random;
 import java.util.ResourceBundle;
@@ -64,16 +65,16 @@ public class InputController implements Initializable {
             if (isWithdraw) {
                 amount = -amount;
             }
-            /*
+
             if (Objects.equals(account_type_value, "Savings account")) {
-                if (isWithdraw && new SavingsAccount(account_name_value, amount, "").isWithdrawable(amount)) {
+                if (isWithdraw && !(new SavingsAccount(account_name_value, amount, "").isWithdrawable(amount))) {
                     throw new Exception("You cannot withdraw this amount from a savings account!");
                 }
             } else if (Objects.equals(account_type_value, "Groceries account")) {
-                if (isInsert && new GroceriesAccount(account_name_value, amount, "").isInsertable(amount)) {
+                if (isInsert && !(new GroceriesAccount(account_name_value, amount, "").isInsertable(amount))) {
                     throw new Exception("You cannot insert this amount into a groceries account!");
                 }
-            }*/
+            }
 
             LocalDateTime currentDateTime = LocalDateTime.now();
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
