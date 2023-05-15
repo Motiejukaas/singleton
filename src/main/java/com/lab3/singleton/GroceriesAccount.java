@@ -5,6 +5,7 @@ public class GroceriesAccount extends AccountData {
 
     public GroceriesAccount(String name, double amount, String time) {
         super(name, amount, time);
+        setInsert_limit(500);
     }
 
     @Override
@@ -15,11 +16,15 @@ public class GroceriesAccount extends AccountData {
         super.insert(sum);
     }
 
-    public double getWithdrawLimit() {
+    public boolean isInsertable(double sum) {
+        return sum <= insert_limit;
+    }
+
+    public double getInsert_limit() {
         return insert_limit;
     }
 
-    public void setWithdrawLimit(double insert_limit) {
+    public void setInsert_limit(double insert_limit) {
         this.insert_limit = insert_limit;
     }
 }

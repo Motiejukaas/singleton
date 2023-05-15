@@ -10,6 +10,9 @@ public class AccountData {
     private String name;
     private ObservableList<Transaction> transactions = FXCollections.observableArrayList();
 
+    public AccountData() {
+    }
+
     public AccountData(String name, double amount, String time) {
 
         Random rand = new Random();
@@ -21,7 +24,7 @@ public class AccountData {
     }
 
     public void withdraw(double sum) {
-        if (sum > amount) {
+        if (-sum > amount) {
             return;
         }
         amount += sum;

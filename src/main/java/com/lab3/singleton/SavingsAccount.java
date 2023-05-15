@@ -6,6 +6,7 @@ public class SavingsAccount extends AccountData {
 
     public SavingsAccount(String name, double amount, String time) {
         super(name, amount, time);
+        setWithdraw_limit(500);
     }
 
     @Override
@@ -15,6 +16,10 @@ public class SavingsAccount extends AccountData {
             return;
         }
         super.withdraw(sum);
+    }
+
+    public boolean isWithdrawable(double sum) {
+        return -sum <= withdraw_limit;
     }
 
     public double getWithdraw_limit() {
